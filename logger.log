@@ -1,0 +1,60 @@
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Root WebApplicationContext: initialization started>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Refreshing Root WebApplicationContext: startup date [Tue Jun 23 15:15:24 EET 2015]; root of context hierarchy>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loading XML bean definitions from URL [file:/C:/xampp/tomcat/webapps/AutoBase/WEB-INF/classes/webContext.xml]>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loading XML bean definitions from URL [jar:file:/C:/xampp/tomcat/webapps/AutoBase/WEB-INF/lib/DaoModule-0.0.1.jar!/daoContext.xml]>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loading XML bean definitions from URL [jar:file:/C:/xampp/tomcat/webapps/AutoBase/WEB-INF/lib/ServicesModule-0.0.1.jar!/serviceContext.xml]>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loading XML bean definitions from URL [jar:file:/C:/xampp/tomcat/webapps/AutoBase/WEB-INF/lib/EntitiesModule-0.0.1.jar!/entityContext.xml]>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loading properties file from class path resource [jdbc.properties]>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Loaded JDBC driver: com.mysql.jdbc.Driver>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HCANN000001: Hibernate Commons Annotations {4.0.5.Final}>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000412: Hibernate Core {4.3.9.Final}>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000206: hibernate.properties not found>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000021: Bytecode provider name : javassist>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000399: Using default transaction strategy (direct JDBC transactions)>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000397: Using ASTQueryTranslatorFactory>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000228: Running hbm2ddl schema update>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000102: Fetching database metadata>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000396: Updating schema>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <HHH000232: Schema update complete>
+23:06:2015 3:15 [localhost-startStop-1] INFO - <Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@36e53b57] of Hibernate SessionFactory for HibernateTransactionManager>
+23:06:2015 3:15 [localhost-startStop-1] ERROR - <Context initialization failed>
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'regService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private dao.DaoUsers login.serv.RegService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [dao.DaoUsers] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4994)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5492)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:649)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1083)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1879)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private dao.DaoUsers login.serv.RegService.dao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [dao.DaoUsers] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [dao.DaoUsers] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
